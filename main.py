@@ -26,16 +26,16 @@ def subjectivity(text):
 
 @app.route('/ngrams/<text>', methods=['GET', 'POST'])
 def ngrams(text):
-    return render_template("dict.html", dict = TextBlob(text).ngrams(3))
+    #return render_template("dict.html", dict = TextBlob(text).ngrams(3))
 
 
-    #list = []
-    #list_ngrams = TextBlob(text).ngrams(3)
-    #for l in list_ngrams:
-    #    l = str(l)
-    #    list.append(l)
+    list = []
+    list_ngrams = TextBlob(text).ngrams(3)
+    for l in list_ngrams:
+        l = str(l)
+        list.append(l)
 
-    #return render_template("list.html", list = list )
+    return render_template("list.html", list = list )
 
 
 if __name__ == '__main__':
