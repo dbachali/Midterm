@@ -26,7 +26,7 @@ def subjectivity(text):
 
 @app.route('/ngrams/<text>/<int:num>', methods=['GET', 'POST'])
 def ngrams(text, num):
-    return render_template("sample.html", name = TextBlob(text).ngrams(num))
+    return render_template("sample.html", name = TextBlob(text).ngrams(3))
 
 
 if __name__ == '__main__':
