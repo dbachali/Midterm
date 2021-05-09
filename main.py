@@ -25,7 +25,7 @@ def subjectivity(text):
     return render_template("sample.html", name = TextBlob(text).subjectivity)
 
 @app.route('/ngrams/<text>', methods=['GET', 'POST'])
-def ngrams():
+def ngrams(text):
     return render_template("list.html", list = TextBlob(text).ngrams(3) )
 
 
