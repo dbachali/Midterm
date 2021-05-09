@@ -24,9 +24,10 @@ def polarity(text):
 def subjectivity(text):
     return render_template("sample.html", name = TextBlob(text).subjectivity)
 
-@app.route('/ngrams/<text>', methods=['GET', 'POST'])
-def ngrams(text):
-    return render_template("list.html", list = TextBlob(text).ngrams(3))
+@app.route('/ngrams', methods=['GET', 'POST'])
+def ngrams():
+    list = [1,2,3,4]
+    return render_template("list.html", list = list )
 
 
 if __name__ == '__main__':
