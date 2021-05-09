@@ -26,7 +26,7 @@ def subjectivity(text):
 
 @app.route('/ngrams/<text>', methods=['GET', 'POST'])
 def ngrams(text):
-    return TextBlob(text).ngrams(3)
+    return render_template("dict.html", dict = TextBlob(text).ngrams(3))
 
 
     #list = []
