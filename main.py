@@ -8,6 +8,10 @@ from textblob import TextBlob
 
 app = Flask(__name__)
 
+@app.route('/test', methods=['GET', 'POST'])
+def test():
+    return render_template("sample.html", name = "test")
+
 @app.route('/sentiment/<text>', methods=['GET', 'POST'])
 def sentiment(text):
     return render_template("sample.html", name = TextBlob(text).sentiment)
