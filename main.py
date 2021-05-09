@@ -26,8 +26,8 @@ def subjectivity(text):
 
 @app.route('/ngrams', methods=['GET', 'POST'])
 def ngrams():
-    list = [1,2,3,4]
-    return render_template("list.html", list = list )
+    my_list = [1,2,3,4]
+    return render_template("list.html", list = my_list )
 
 
 if __name__ == '__main__':
