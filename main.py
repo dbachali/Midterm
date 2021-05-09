@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route('/test', methods=['GET', 'POST'])
 def test():
-    return render_template("sample.html", name = "test")
+    return "<h1>test</h1>"
 
 @app.route('/sentiment/<text>', methods=['GET', 'POST'])
 def sentiment(text):
@@ -27,7 +27,6 @@ def subjectivity(text):
 @app.route('/ngrams/<text>/<num>', methods=['GET', 'POST'])
 def ngrams(text, num):
     return render_template("sample.html", name = TextBlob(text).ngrams(num))
-
 
 
 if __name__ == '__main__':
