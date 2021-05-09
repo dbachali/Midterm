@@ -24,13 +24,13 @@ def polarity(text):
 def subjectivity(text):
     return render_template("sample.html", name = TextBlob(text).subjectivity)
 
-@app.route('/ngrams/<text>', methods=['GET', 'POST'])
-def ngrams(text):
+@app.route('/ngrams/<text>/<int:num>', methods=['GET', 'POST'])
+def ngrams(text, num):
     #return render_template("dict.html", dict = TextBlob(text).ngrams(3))
 
 
     list = []
-    list_ngrams = TextBlob(text).ngrams(3)
+    list_ngrams = TextBlob(text).ngrams(num)
     for l in list_ngrams:
         l = str(l)
         list.append(l)
