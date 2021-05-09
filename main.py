@@ -20,8 +20,8 @@ def polarity(text):
 def subjectivity(text):
     return render_template("sample.html", name = TextBlob(text).subjectivity)
 
-@app.route('/subjectivity/<text>/<num>', methods=['GET', 'POST'])
-def subjectivity(text, num):
+@app.route('/ngrams/<text>/<num>', methods=['GET', 'POST'])
+def ngrams(text, num):
     return render_template("sample.html", name = TextBlob(text).ngrams(num))
 
 
