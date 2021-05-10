@@ -10,20 +10,27 @@ How to use this API and port;
 Call the api via the following URL
 107.20.37.178:8000
 
-Add the following to the base <URL> above to access specific NLP services:
-1. <URL>/test/<text>
+Add the following to the base <URL> above to access specific services:
+1. <URL>/
+    Returns a title page and directions to help.
+
+2. <URL>/help
+    Displays this README file.
+
+3. <URL>/test/<text>
     This will test that the API is running and accepting the string, <text>, entered by the user.
     Enter in a string of your choice for <text>
 
-2. <URL>/sentiment/<text>
+4. <URL>/sentiment/<text>
     This will perform sentiment analysis on <text>, entered by the user.
 
-3. <URL>/polarity/<text>
+5. <URL>/polarity/<text>
     This will give a polarity for the <text>, entered by the user.
 
-4. <URL>/subjectivity/<text>
+6. <URL>/subjectivity/<text>
     This will give a subjectivity for the <text>, entered by the user.
 
-5. <URL>/ngrams/<text>/<num>
+7. <URL>/ngrams/<text>/<num>
     This will split a given <text> into ngrams of a given size, <num>, entered by the user.
     *NOTE: num must be an integer, greater than zero and less than or equal to the number of words in the given string.
+

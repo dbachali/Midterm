@@ -13,12 +13,18 @@ app = Flask(__name__)
 def home():
     return """<h1>NLP API</h1> <p> See /help for documentation on the use of this API."""
 
-
+@app.route('/help', methods=['GET'])
+def help():
+    """Return the README file contents. Supports text,rst, and markdown"""
+    for name in ('README', 'README.rst', 'README.md'):
+        if os.path.exists(name):
+            return read_file(name)
+    return "Sorry, no help exists :("
 
 @app.route('/test/<text>', methods=['GET', 'POST'])
 # test definition to verify that the service is running and accepting a given string
 def test(text):
-    return remder_template("sample.html", name = text, Title = "test")
+    return render_template("sample.html", name = text, Title = "test")
 
 @app.route('/sentiment/<text>', methods=['GET', 'POST'])
 # sentiment analysis on a given string
