@@ -28,17 +28,17 @@ Add the following to the base <URL> above to access specific services:
 
     Displays this README file.
 
-3. <URL>/test/<text>
+3. &lt;URL&gt;/test/TEXT
 
-    This will test that the API is running and accepting the string, <text>, entered by the user.
+    This will test that the API is running and accepting the string, TEXT, entered by the user.
 
-    Enter in a string of your choice for <text>
+    Enter in a string of your choice for text
 
-4. <URL>/sentiment/<text>
+4. <URL>/sentiment/text
 
-    This will perform sentiment analysis on <text>, entered by the user.
+    This will perform sentiment analysis on text, entered by the user.
 
-5. <URL>/polarity/<text>
+5. <URL>/polarity/text
 
     This will give a polarity for the <text>, entered by the user.
 
