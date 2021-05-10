@@ -26,9 +26,9 @@ def subjectivity(text):
 
 @app.route('/ngrams/<text>/<int:num>', methods=['GET', 'POST'])
 def ngrams(text, num):
-    if num > len(text.split())
+    if num > len(text.split()):
         return "The ngram number must be >= the number of words in text."
-    
+
     list = []
     list_ngrams = TextBlob(text).ngrams(num)
     for l in list_ngrams:
