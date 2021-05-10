@@ -5,6 +5,7 @@ from flask import Flask
 import nltk
 nltk.download('wordnet')
 from textblob import TextBlob
+import markdown
 
 app = Flask(__name__)
 
@@ -15,11 +16,11 @@ def home():
 
 @app.route('/help', methods=['GET'])
 def help():
-    """Return the README file contents. Supports text,rst, and markdown"""
-    for name in ('README', 'README.rst', 'README.md'):
-        if os.path.exists(name):
-            return read_file(name)
-    return "Sorry, no help exists :("
+    "Return the README file contents by converting and displaying the README file in HTML"
+    with open('README.md', 'r') as f:
+        text = f.read()
+        html = markdown.markdown(text)
+    return html
 
 @app.route('/test/<text>', methods=['GET', 'POST'])
 # test definition to verify that the service is running and accepting a given string
