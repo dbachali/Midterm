@@ -45,11 +45,6 @@ def ngrams(text, num):
 
     return render_template("list.html", list = list, Title = "ngrams", text = text)
 
-@app.route('/ngrams/<text>/<string>', methods=['GET', 'POST'])
-# Error catching
-def error():
-    return "The ngram number must be non-zero, positive and >= the number of words in text."
-
 
 if __name__ == '__main__':
     app.run(host = '0.0.0.0', port=8000)

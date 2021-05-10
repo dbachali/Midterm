@@ -26,3 +26,4 @@ Add the following to the base <URL> above to access specific NLP services:
 
 5. <URL>/ngrams/<text>/<num>
     This will split a given <text> into ngrams of a given size, <num>, entered by the user.
+    *NOTE: num must be an integer, greater than zero and less than or equal to the number of words in the given string.
