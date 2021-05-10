@@ -9,10 +9,16 @@ from textblob import TextBlob
 app = Flask(__name__)
 
 # create routes for nlp services on a given string
+@app.route('/', methods=['GET'])
+def home():
+    return """<h1>NLP API</h1> <p> See /help for documentation on the use of this API."""
+
+
+
 @app.route('/test/<text>', methods=['GET', 'POST'])
 # test definition to verify that the service is running and accepting a given string
 def test(text):
-    return render_template("sample.html", name = text, Title = "test")
+    return remder_template("sample.html", name = text, Title = "test")
 
 @app.route('/sentiment/<text>', methods=['GET', 'POST'])
 # sentiment analysis on a given string
@@ -34,7 +40,7 @@ def subjectivity(text):
 def ngrams(text, num):
     # Check that num isn't greater than the number or words in text, which would result in a blank screen
     if num > len(text.split()) or num < 1 or not isinstance(num, int):
-        return "The ngram number must be non-zero, positive and >= the number of words in text."
+        return "<h2>The ngram number must be non-zero, positive and >= the number of words in text.</h2"
 
     # Create a list to fill with ngrams that can be easily read and displayed in html
     list = []
