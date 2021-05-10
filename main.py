@@ -43,7 +43,7 @@ def sentiment(text):
 @app.route('/polarity/<text>', methods=['GET', 'POST'])
 # polarity of a given string
 def polarity(text):
-    return remder_template("sample.html", name = TextBlob(text).polarity, Title = "polarity", text = text)
+    return render_template("sample.html", name = TextBlob(text).polarity, Title = "polarity", text = text)
 
 @app.route('/subjectivity/<text>', methods=['GET', 'POST'])
 # subjectivity of a given string
