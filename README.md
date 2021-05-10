@@ -18,37 +18,37 @@ Call the api via the following URL
 
 107.20.37.178:8000
 
-Add the following to the base <URL> above to access specific services:
+Add the following to the base &lt;URL&gt; above to access specific services:
 
-1. <URL>/
+1. &lt;URL&gt;/
 
     Returns a title page and directions to help.
 
-2. <URL>/help
+2. &lt;URL&gt;/help
 
     Displays this README file.
 
-3. &lt;URL&gt;/test/TEXT
+3. &lt;URL&gt;/test/&lt;text&gt;
 
-    This will test that the API is running and accepting the string, TEXT, entered by the user.
+    This will test that the API is running and accepting the string, &lt;text&gt;, entered by the user.
 
-    Enter in a string of your choice for text
+    Enter in a string of your choice for &lt;text&gt;
 
-4. <URL>/sentiment/text
+4. &lt;URL&gt;/sentiment/text
 
-    This will perform sentiment analysis on text, entered by the user.
+    This will perform sentiment analysis on &lt;text&gt;, entered by the user.
 
-5. <URL>/polarity/text
+5. &lt;URL&gt;/polarity/&lt;text&gt;
 
-    This will give a polarity for the <text>, entered by the user.
+    This will give a polarity for the &lt;text&gt;, entered by the user.
 
-6. <URL>/subjectivity/<text>
+6. &lt;URL&gt;/subjectivity/&lt;text&gt;
 
-    This will give a subjectivity for the <text>, entered by the user.
+    This will give a subjectivity for the &lt;text&gt;, entered by the user.
 
-7. <URL>/ngrams/<text>/<num>
+7. &lt;URL&gt;/ngrams/&lt;text&gt;/&lt;num&gt;
 
-    This will split a given <text> into ngrams of a given size, <num>, entered by the user.
+    This will split a given &lt;text&gt; into ngrams of a given size, &lt;num&gt;, entered by the user.
 
     *NOTE: num must be an integer, greater than zero and less than or equal to the number of words in the given string.
 
