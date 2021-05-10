@@ -47,7 +47,7 @@ def ngrams(text, num):
 
 @app.route('/ngrams/<text>/<text>', methods=['GET', 'POST'])
 # Error catching
-return "The ngram number must be non-zero, positive and >= the number of words in text."
+print("The ngram number must be non-zero, positive and >= the number of words in text.")
 
 
 if __name__ == '__main__':
