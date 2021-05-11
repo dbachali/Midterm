@@ -12,14 +12,15 @@ The project should conform to the following guidelines:
 
 4. Test your API well. Provide instructions for using your API in the Readme of your git project (and/or as documentation available through your flask app). Your API should not return a 5XX error whenever possible. Do this by catching errors in the cURL call and returning 4XX errors to the user.
 
-How to use this API:
+# How to use this API:
+
 *Note: To add in a "?" use "%3F" so that HTML will recognize this special character. Otherwise this API will not accecpt the "?" and the ngrams service will give a 404 error.
 
-Call the api via the following URL
+# Call the api via the following URL
 
 107.20.37.178:8000
 
-Add the following to the base &lt;URL&gt; above to access specific services:
+# Add the following to the base &lt;URL&gt; above to access specific services:
 
 1. &lt;URL&gt;/
 
