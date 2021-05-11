@@ -55,7 +55,7 @@ def subjectivity(text):
 def ngrams(text, num):
     # Check that num isn't greater than the number or words in text, which would result in a blank screen
     if num > len(text.split()) or num < 1 or not isinstance(num, int):
-        return "<h2>The ngram number must be non-zero, positive and >= the number of words in text.</h2"
+        return "<h2>The ngram number must be non-zero, positive and <= the number of words in text.</h2"
 
     # Create a list to fill with ngrams that can be easily read and displayed in html
     list = []
