@@ -16,7 +16,7 @@ The project should conform to the following guidelines:
 
 *Note: To add in a "?" use "%3F" so that HTML will recognize this special character. Otherwise this API will not accecpt the "?" and the ngrams service will give a 404 error.
 
-# Call the api via the following URL
+# Call the api via the following URL:
 
 107.20.37.178:8000
 
